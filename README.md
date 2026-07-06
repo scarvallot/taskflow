@@ -67,11 +67,11 @@ La aplicación debe permitir a los usuarios:
 - Arquitectura por capas (Layered /N-Tired Architecture)
 
 ---
+
 <br>
   <div align="center">
-    <p>Crafted by <b><a href="https://github.com/scarvallot">whiterabbit 🕳🐇</p</a></b></p>
+    <p>Crafted by <b><a href="https://github.com/scarvallot">whiterabbit 🕳🐇</br><strong>2026</strong></p</a></b></p>
     <a href="https://github.com/scarvallot/taskflow.git">
     </a>
   </div>
 <br>
-
