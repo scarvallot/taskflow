@@ -63,5 +63,3 @@ class GestorTareas {
     console.log('-----------------------------------------\n');
   };
 }
-
-module.exports = { Tarea, GestorTareas };
