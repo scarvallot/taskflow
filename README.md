@@ -62,6 +62,34 @@ La aplicación debe permitir a los usuarios:
 
 ---
 
+## Funcionamiento de la aplicación
+
+TaskFlow es una aplicación web para gestionar tareas de manera sencilla e intuitiva. La aplicación permite:
+
+- Crear nuevas tareas.
+- Marcar tareas como completadas.
+- Editar el contenido de una tarea.
+- Eliminar tareas.
+- Visualizar un resumen de tareas próximas a vencer.
+
+La interacción se basa en la manipulación del DOM y el manejo de eventos. Cada acción del usuario actualiza la interfaz de forma inmediata, manteniendo visibles los estados de cada tarea y mejorando la organización del trabajo.
+
+## Captura de pantalla
+
+A continuación se muestra una imagen del funcionamiento de TaskFlow:
+
+![Captura de TaskFlow](src/assets/taskflow-Screenshot.png)
+
+## Funcionamiento de la API
+
+TaskFlow utiliza `fetch()` para solicitar tareas de ejemplo a JSONPlaceholder. El flujo es el siguiente: la app hace una petición GET, recibe un array de tareas JSON, transforma cada elemento en una instancia de `Tarea` y luego las muestra en la interfaz. Si la API no responde, se usa un arreglo local de respaldo para que el usuario pueda seguir probando la app.
+
+### Captura del código de la API
+
+![Captura del código de la API](src/assets/apiService-screenshots.png)
+
+---
+
 ## Arquitectura de la Aplicación
 
 - Arquitectura por capas (Layered /N-Tired Architecture)
