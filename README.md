@@ -90,6 +90,37 @@ TaskFlow utiliza `fetch()` para solicitar tareas de ejemplo a JSONPlaceholder. E
 
 ---
 
+## Diagrama de directorios
+
+A continuación se muestra la estructura de directorios del proyecto (nivel raíz):
+
+```
+taskflow/
+├── .eslintrc
+├── .git/
+├── .gitignore
+├── .prettierrc
+├── app.js
+├── index.html
+├── LICENSE
+├── README.md
+└── src/
+  ├── assets/
+  │   └── taskflow-Screenshot.png
+  ├── controllers/
+  │   └── eventHandlers.js
+  ├── models/
+  │   ├── GestorTarea.js
+  │   └── Tarea.js
+  ├── services/
+  │   ├── apiService.js
+  │   └── storageService.js
+  ├── styles/
+  │   └── main.css
+  └── views/
+    └── ui.js
+```
+
 ## Arquitectura de la Aplicación
 
 - Arquitectura por capas (Layered /N-Tired Architecture)
