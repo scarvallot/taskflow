@@ -1,0 +1,306 @@
+:root {
+  /* Tokens base */
+  --bs-primary: #4f46e5;
+  --bs-primary-rgb: 79, 70, 229;
+  --tf-surface: rgba(255, 255, 255, 0.84);
+  --tf-surface-border: rgba(148, 163, 184, 0.18);
+  --tf-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+/* Estilo general */
+body {
+  font-family:
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(16, 185, 129, 0.08), transparent 24%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  color: #0f172a;
+}
+
+/* Tarjetas */
+.card {
+  border-color: var(--tf-surface-border) !important;
+  border-radius: 1rem;
+  box-shadow: var(--tf-shadow);
+  backdrop-filter: blur(10px);
+}
+
+/* Cuerpo de tarjeta */
+.card-body {
+  background: var(--tf-surface);
+  border-radius: inherit;
+}
+
+.form-control,
+.btn,
+.badge,
+.progress {
+  border-radius: 0.8rem;
+}
+
+/* Enfoque de inputs */
+.form-control:focus {
+  border-color: rgba(79, 70, 229, 0.45);
+  box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.12);
+}
+
+/* Logo */
+.tf-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: var(--bs-primary);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.tf-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+/* Tarea */
+.tf-task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-left: 4px solid var(--bs-primary) !important;
+  border-radius: 0.9rem;
+  background: #fff;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+  animation: tfFadeIn 0.2s ease;
+}
+
+.tf-task-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.12) !important;
+}
+
+.tf-task-item--done {
+  border-left-color: #10b981 !important;
+}
+
+.tf-task-item--overdue {
+  border-left-color: #ef4444 !important;
+  background: linear-gradient(180deg, rgba(254, 242, 242, 0.9), #fff);
+}
+
+.tf-task-item--done .tf-task-text {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.tf-task-item--overdue .tf-task-meta,
+.tf-task-item--overdue .tf-countdown-item__timer {
+  color: #991b1b;
+}
+
+.tf-task-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.tf-task-meta {
+  color: #64748b;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.tf-task-text {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tf-task-check {
+  accent-color: var(--bs-primary);
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+/* Acciones de tarea */
+.tf-task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: flex-end;
+}
+
+/* Botones pequeños */
+.tf-icon-btn {
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  background: #fff;
+  color: #334155;
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  transition:
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.tf-icon-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(79, 70, 229, 0.35);
+  color: var(--bs-primary);
+}
+
+.tf-icon-btn--danger:hover {
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #dc2626;
+}
+
+.tf-task-list--empty,
+.tf-countdown-empty {
+  padding: 1rem;
+  border: 1px dashed rgba(148, 163, 184, 0.35);
+  border-radius: 0.9rem;
+  background: rgba(248, 250, 252, 0.85);
+  color: #64748b;
+  text-align: center;
+}
+
+/* Filtros */
+.tf-chip {
+  padding: 3px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.73rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.tf-chip:hover {
+  border-color: var(--bs-primary);
+  color: var(--bs-primary);
+}
+
+.tf-chip--active {
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
+
+#tf-filter-inline .tf-chip:focus-visible,
+.tf-icon-btn:focus-visible,
+.tf-task-check:focus-visible {
+  outline: 3px solid rgba(79, 70, 229, 0.24);
+  outline-offset: 2px;
+}
+
+.tf-progress-bar {
+  transition: width 0.4s ease;
+}
+
+/* Vencimientos */
+.tf-countdown-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.85rem 0.9rem;
+  border-radius: 0.9rem;
+  background: #fff;
+  border-left: 3px solid #f59e0b;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+.tf-countdown-item--urgent {
+  border-left-color: #ef4444;
+  background: linear-gradient(180deg, rgba(254, 242, 242, 0.92), #fff);
+}
+
+.tf-countdown-item__name {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.tf-countdown-item__timer {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.tf-cd-timer {
+  color: #f59e0b;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.tf-countdown-item--urgent .tf-cd-timer {
+  color: #ef4444;
+}
+
+.tf-countdown-empty {
+  width: 100%;
+}
+
+/* Animación */
+@keyframes tfFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .tf-task-item,
+  .tf-progress-bar,
+  .tf-icon-btn,
+  .tf-chip {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .tf-task-item {
+    padding: 0.9rem;
+  }
+
+  .tf-task-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .tf-countdown-item {
+    flex-direction: column;
+  }
+
+  .tf-countdown-item__timer {
+    text-align: left;
+  }
+}
