@@ -62,9 +62,56 @@ La aplicación debe permitir a los usuarios:
 
 ---
 
+## Funcionamiento de la aplicación
+
+TaskFlow es una aplicación web para gestionar tareas de manera sencilla e intuitiva. La aplicación permite:
+
+- Crear nuevas tareas.
+- Marcar tareas como completadas.
+- Editar el contenido de una tarea.
+- Eliminar tareas.
+- Visualizar un resumen de tareas próximas a vencer.
+
+La interacción se basa en la manipulación del DOM y el manejo de eventos. Cada acción del usuario actualiza la interfaz de forma inmediata, manteniendo visibles los estados de cada tarea y mejorando la organización del trabajo.
+
+## Captura de pantalla
+
+A continuación se muestra una imagen del funcionamiento de TaskFlow:
+
+![Captura de TaskFlow](src/assets/taskflow-Screenshot.png)
+
+---
+
 ## Arquitectura de la Aplicación
 
 - Arquitectura por capas (Layered /N-Tired Architecture)
+
+```markdown
+  taskflow/
+  ├── .eslintrc
+  ├── .git/
+  ├── .gitignore
+  ├── .prettierrc
+  ├── app.js
+  ├── index.html
+  ├── LICENSE
+  ├── README.md
+  └── src/
+      ├── assets/
+      │   └── taskflow-Screenshot.png
+      ├── controllers/
+      │   └── eventHandlers.js
+      ├── models/
+      │   ├── GestorTarea.js
+      │   └── Tarea.js
+      ├── services/
+      │   ├── apiService.js
+      │   └── storageService.js
+      ├── styles/
+      │   └── main.css
+      └── views/
+          └── ui.js
+```
 
 ---
 
