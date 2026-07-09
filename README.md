@@ -80,38 +80,19 @@ A continuación se muestra una imagen del funcionamiento de TaskFlow:
 
 ![Captura de TaskFlow](src/assets/taskflow-Screenshot.png)
 
+## Funcionamiento de la API
+
+TaskFlow utiliza `fetch()` para solicitar tareas de ejemplo a JSONPlaceholder. El flujo es el siguiente: la app hace una petición GET, recibe un array de tareas JSON, transforma cada elemento en una instancia de `Tarea` y luego las muestra en la interfaz. Si la API no responde, se usa un arreglo local de respaldo para que el usuario pueda seguir probando la app.
+
+### Captura del código de la API
+
+![Captura del código de la API](src/assets/apiService-screenshots.png)
+
 ---
 
 ## Arquitectura de la Aplicación
 
 - Arquitectura por capas (Layered /N-Tired Architecture)
-
-```markdown
-  taskflow/
-  ├── .eslintrc
-  ├── .git/
-  ├── .gitignore
-  ├── .prettierrc
-  ├── app.js
-  ├── index.html
-  ├── LICENSE
-  ├── README.md
-  └── src/
-      ├── assets/
-      │   └── taskflow-Screenshot.png
-      ├── controllers/
-      │   └── eventHandlers.js
-      ├── models/
-      │   ├── GestorTarea.js
-      │   └── Tarea.js
-      ├── services/
-      │   ├── apiService.js
-      │   └── storageService.js
-      ├── styles/
-      │   └── main.css
-      └── views/
-          └── ui.js
-```
 
 ---
 
